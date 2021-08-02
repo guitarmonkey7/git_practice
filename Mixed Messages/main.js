@@ -4,9 +4,12 @@ const adjectiveArray = ['super','gnarly','funky','spinning','smashing','deliciou
 'broke-neck','broke-back','limp','indecent','moist','unassuming','forgettable','wicked','morbid','lunar','solar','extraterrestrial','ancient','wandering','duck-billed','red-breasted',
 'oven-roasted','charbroiled','drowned','swollen','unprecedented','lyrical','ambient','weird','interdimensional','virtual','binary','disoriented','spotted','dysfunctional','merry',
 'green','cyan','blue','indigo','red','orange','yellow','black','white','gray','purple','lime','violet','pink','irreverent','cadywompus','narcissistic','troubled','stimulated',
-'awkward','hammy','conceited','vain','villianous','absurd','shimmering','gargantuan','blazing','flaming','theoretical']
+'awkward','hammy','conceited','vain','villianous','absurd','shimmering','gargantuan','blazing','flaming','theoretical','spetoinkered','cybernetic','maleficent','benevolent',
+'dismissable','silicon','wooden','metallic','metal','plastic','smooth','abrasive','flamboyant','bouant','amphibious','ambidextrous','bisexual','gay','greasy','obese',
+'made-in-China','Russian','Antarctic','African','Canadian','turquoise','alien','melted','dissolving','carbonated','flat']
 
-const adverbArray = ['somewhat','inadvertantly','slightly','mostly','overly','socially','technically','partially','absurdly','undoubtedly','possibly','understandably']
+const adverbArray = ['somewhat','inadvertantly','slightly','mostly','overly','socially','technically','partially','absurdly','undoubtedly','possibly','understandably','marginally',
+'morbidly','exceedingly','nonchalantly','scarily','frighteningly','sort of','absolutely','totally','non','']
 
 const nounArray = [
     'darkness', 'light',      'midnight',
@@ -15,7 +18,7 @@ const nounArray = [
     'time',     'person',     'year',
     'way',      'day',        'thing',
     'man',      'world',      'life',
-    'hand',     'part',       'child',
+    'hand',     'dick',       'child',
     'eye',      'woman',      'place',
     'work',     'week',       'case',
     'point',    'government', 'company',
@@ -23,41 +26,41 @@ const nounArray = [
     'fact',     'whoreson',   'nematoad',
     'giant',    'pickle',     'hydrofoil',
     'cream',    'dream',      'galaxy',
-    'star',     'planetarium','undecided'
+    'star',     'planetarium','undecided',
+    'moron',    'mormon',     'glass',
+    'stain',    'pie',        'cow',
+    'toast',    'rocket',     'monkey',
+    'spetoinkerville','hooligan','ne\'er-do-well',
+    'brigand','simpleton','cyborg','pirate','mama',
+    'weed','rat','rat tail','turban','turbine',
+    'Hank','screw','nail','tail','chain','gimp',
+    'hood','quack','ion','box','fox','sword','philibuster',
+    'skeleton','bone shaman','turtle','taco',
+    'sorbet','mullet','lesbian','hat','electricity',
+    'alien','cohort','sorcerer','ranger','alcoholic'
   ]
-  
-
-// let unprocessedNouns = `time person year way day thing man world life hand part child eye woman place work week case point government company number group problem fact`;
-
-// const addToNounArray = array => {
-//     let partiallyProcessedNouns = array.split(' ');
-//     partiallyProcessedNouns.forEach(element => nounArray.push(element));
-//         return nounArray;
-// }
-
-// console.log(addToNounArray(unprocessedNouns));
-
-// begin band name generating using string concat/interpolation
 
 const createBandName = () => {
-  let modifier = '';
+  let modifier;
   let adjectiveIndex = Math.floor(Math.random()*adjectiveArray.length);
   let nounIndex = Math.floor(Math.random()*nounArray.length);
-  let selector = Math.floor(Math.random()*11);
+  let adverbIndex = Math.floor(Math.random()*adverbArray.length);
+  let selector = Math.floor(Math.random()*100);
   let simpleName = `${adjectiveArray[adjectiveIndex]} ${nounArray[nounIndex]}`;
-  let finalName = `${modifier} ${simpleName}`
-  if (selector < 4) {
+  let finalName = `${simpleName}`;
+  if (selector < 40) {
     modifier = '';
-  } else if (selector < 7) {
+  } else if (selector < 70) {
     modifier = 'The';
-    let finalName = finalName + 's';
-  } else if (selector < 10) {
-    modifier = adverbArray[Math.floor(Math.random()*adverbArray.length)];
-  } else if (selector >= 10) {
+    finalName = `${modifier} ${finalName}s`;
+  } else if (selector < 100) {
+    modifier = adverbArray[adverbIndex];
+    finalName = `${modifier} ${finalName}`;
+  } else if (selector == 100) {
     let secondNounIndex = Math.floor(Math.random()*nounArray.length);
     finalName = `${nounArray[nounIndex]} ${nounArray[secondNounIndex]}`;
   }
-  return finalName
+  return finalName;
 }
 
 console.log(createBandName());
