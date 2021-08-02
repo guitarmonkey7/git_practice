@@ -52,7 +52,7 @@ const createBandName = () => {
     modifier = '';
   } else if (selector < 70) {
     modifier = 'The';
-    finalName = `${modifier} ${finalName}s`;
+    finalName = `${modifier} ${pluralize(finalName)}`;
   } else if (selector < 100) {
     modifier = adverbArray[adverbIndex];
     finalName = `${modifier} ${finalName}`;
