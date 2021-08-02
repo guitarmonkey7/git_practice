@@ -37,3 +37,27 @@ const nounArray = [
 
 // console.log(addToNounArray(unprocessedNouns));
 
+// begin band name generating using string concat/interpolation
+
+const createBandName = () => {
+  let modifier = '';
+  let adjectiveIndex = Math.floor(Math.random()*adjectiveArray.length);
+  let nounIndex = Math.floor(Math.random()*nounArray.length);
+  let selector = Math.floor(Math.random()*11);
+  let simpleName = `${adjectiveArray[adjectiveIndex]} ${nounArray[nounIndex]}`;
+  let finalName = `${modifier} ${simpleName}`
+  if (selector < 4) {
+    modifier = '';
+  } else if (selector < 7) {
+    modifier = 'The';
+    let finalName = finalName + 's';
+  } else if (selector < 10) {
+    modifier = adverbArray[Math.floor(Math.random()*adverbArray.length)];
+  } else if (selector >= 10) {
+    let secondNounIndex = Math.floor(Math.random()*nounArray.length);
+    finalName = `${nounArray[nounIndex]} ${nounArray[secondNounIndex]}`;
+  }
+  return finalName
+}
+
+console.log(createBandName());
