@@ -1,3 +1,5 @@
+// import pluralize from 'pluralize';
+
 const adjectiveArray = ['super','gnarly','funky','spinning','smashing','delicious','serene','abominable','zombie','dead','undead','spicy','crushing','awesome','honest',
 'melancholy','tight','loose','luminating','lucid','flaccid','enigmatic','hairy','lukewarm','prestigous','paranoid','xenophobic','deiphobic','paraplegic','leprous','distilled',
 'fiery','ice cold','frigid','magic','lying','dying','thriving','cauliflour','burnt','deep-sea','billionare','cheesy','metaphoric','upside-down','oxymoronic','ironic','dancing',
@@ -6,10 +8,10 @@ const adjectiveArray = ['super','gnarly','funky','spinning','smashing','deliciou
 'green','cyan','blue','indigo','red','orange','yellow','black','white','gray','purple','lime','violet','pink','irreverent','cadywompus','narcissistic','troubled','stimulated',
 'awkward','hammy','conceited','vain','villianous','absurd','shimmering','gargantuan','blazing','flaming','theoretical','spetoinkered','cybernetic','maleficent','benevolent',
 'dismissable','silicon','wooden','metallic','metal','plastic','smooth','abrasive','flamboyant','bouant','amphibious','ambidextrous','bisexual','gay','greasy','obese',
-'made-in-China','Russian','Antarctic','African','Canadian','turquoise','alien','melted','dissolving','carbonated','flat']
+'made-in-China','Russian','Antarctic','African','Canadian','turquoise','alien','melted','dissolving','carbonated','flat','distended','attentive','plastered','','']
 
 const adverbArray = ['somewhat','inadvertantly','slightly','mostly','overly','socially','technically','partially','absurdly','undoubtedly','possibly','understandably','marginally',
-'morbidly','exceedingly','nonchalantly','scarily','frighteningly','sort of','absolutely','totally','non','']
+'morbidly','exceedingly','nonchalantly','scarily','frighteningly','sort of','absolutely','totally','non']
 
 const nounArray = [
     'darkness', 'light',      'midnight',
@@ -37,7 +39,8 @@ const nounArray = [
     'hood','quack','ion','box','fox','sword','philibuster',
     'skeleton','bone shaman','turtle','taco',
     'sorbet','mullet','lesbian','hat','electricity',
-    'alien','cohort','sorcerer','ranger','alcoholic'
+    'alien','cohort','sorcerer','ranger','alcoholic','',
+    'wimp','nipple','ass'
   ]
 
 const createBandName = () => {
@@ -52,7 +55,9 @@ const createBandName = () => {
     modifier = '';
   } else if (selector < 70) {
     modifier = 'The';
-    finalName = `${modifier} ${pluralize(finalName)}`;
+    let newNoun = nounArray[nounIndex];
+    // simpleName = `${adjectiveArray[adjectiveIndex]} ${pluralize(newNoun)}`;
+    finalName = `${modifier} ${finalName}s`;
   } else if (selector < 100) {
     modifier = adverbArray[adverbIndex];
     finalName = `${modifier} ${finalName}`;
