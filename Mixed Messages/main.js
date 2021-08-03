@@ -60,19 +60,21 @@ const createBandName = () => {
   let selector = Math.floor(Math.random()*100);
   let simpleName = `${adjectiveArray[adjectiveIndex]} ${nounArray[nounIndex]}`;
   let finalName = `${simpleName}`;
-  if (selector < 40) {
+  if (selector < 50) {
     modifier = '';
-  } else if (selector < 70) {
+  } else if (selector < 75) {
     modifier = 'The';
     let newNoun = nounArray[nounIndex];
     // simpleName = `${adjectiveArray[adjectiveIndex]} ${pluralize(newNoun)}`;
     finalName = `${modifier} ${finalName}s`;
-  } else if (selector < 100) {
+  } else if (selector < 98) {
     modifier = adverbArray[adverbIndex];
     finalName = `${modifier} ${finalName}`;
-  } else if (selector == 100) {
+  } else if (selector < 100) {
     let secondNounIndex = Math.floor(Math.random()*nounArray.length);
-    finalName = `${nounArray[nounIndex]} ${nounArray[secondNounIndex]}`;
+    let firstNoun = nounArray[nounIndex];
+    let secondNoun = nounArray[secondNounIndex];
+    finalName = `${firstNoun} ${secondNoun}`;
   }
   return finalName;
 }
