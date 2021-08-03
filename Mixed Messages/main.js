@@ -8,7 +8,9 @@ const adjectiveArray = ['super','gnarly','funky','spinning','smashing','deliciou
 'green','cyan','blue','indigo','red','orange','yellow','black','white','gray','purple','lime','violet','pink','irreverent','cadywompus','narcissistic','troubled','stimulated',
 'awkward','hammy','conceited','vain','villianous','absurd','shimmering','gargantuan','blazing','flaming','theoretical','spetoinkered','cybernetic','maleficent','benevolent',
 'dismissable','silicon','wooden','metallic','metal','plastic','smooth','abrasive','flamboyant','bouant','amphibious','ambidextrous','bisexual','gay','greasy','obese',
-'made-in-China','Russian','Antarctic','African','Canadian','turquoise','alien','melted','dissolving','carbonated','flat','distended','attentive','plastered','','']
+'made-in-China','Russian','Antarctic','African','Canadian','turquoise','alien','melted','dissolving','carbonated','flat','distended','attentive','plastered','abecedarian',
+'rudimentary','sacreligious','intolerant', 'lactose-intolerant', 'serpentine','waning','waxing','aqueous','ravenous','crocodilian', 'Seinfeldian','Ricktastic', 'mortified',
+'mammalian', 'reptilian', 'rock-hard', 'Freudian','erect','solid', 'dumpy']
 
 const adverbArray = ['somewhat','inadvertantly','slightly','mostly','overly','socially','technically','partially','absurdly','undoubtedly','possibly','understandably','marginally',
 'morbidly','exceedingly','nonchalantly','scarily','frighteningly','sort of','absolutely','totally','non']
@@ -40,7 +42,8 @@ const nounArray = [
     'skeleton','bone shaman','turtle','taco',
     'sorbet','mullet','lesbian','hat','electricity',
     'alien','cohort','sorcerer','ranger','alcoholic','',
-    'wimp','nipple','ass'
+    'wimp','nipple','ass', 'psychogalvanometer','weasel',
+    'herald', 'bazongas', 'boaner', 'schlongle', 'diamond-cutter', 'dump','terd'
   ]
 
 const createBandName = () => {
