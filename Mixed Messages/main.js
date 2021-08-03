@@ -10,7 +10,8 @@ const adjectiveArray = ['super','gnarly','funky','spinning','smashing','deliciou
 'dismissable','silicon','wooden','metallic','metal','plastic','smooth','abrasive','flamboyant','bouant','amphibious','ambidextrous','bisexual','gay','greasy','obese',
 'made-in-China','Russian','Antarctic','African','Canadian','turquoise','alien','melted','dissolving','carbonated','flat','distended','attentive','plastered','abecedarian',
 'rudimentary','sacreligious','intolerant', 'lactose-intolerant', 'serpentine','waning','waxing','aqueous','ravenous','crocodilian', 'Seinfeldian','Ricktastic', 'mortified',
-'mammalian', 'reptilian', 'rock-hard', 'Freudian','erect','solid', 'dumpy']
+'mammalian', 'reptilian', 'rock-hard', 'Freudian','erect','solid', 'dumpy', 'mollycoddled', 'bamboozled','used','abused','recycled','Jewish','stingy','shit-faced','Zionist',
+'mustachioed','wasted','snockered','drunk','toinkered','flying','pretentious','superfluous']
 
 const adverbArray = ['somewhat','inadvertantly','slightly','mostly','overly','socially','technically','partially','absurdly','undoubtedly','possibly','understandably','marginally',
 'morbidly','exceedingly','nonchalantly','scarily','frighteningly','sort of','absolutely','totally','non']
@@ -43,7 +44,8 @@ const nounArray = [
     'sorbet','mullet','lesbian','hat','electricity',
     'alien','cohort','sorcerer','ranger','alcoholic','',
     'wimp','nipple','ass', 'psychogalvanometer','weasel',
-    'herald', 'bazongas', 'boaner', 'schlongle', 'diamond-cutter', 'dump','terd'
+    'herald', 'bazongas', 'boaner', 'schlongle', 'diamond-cutter', 'dump','terd', 'brouhaha', 'melee', 'donnybrook','rigmarole', 'winklepicker', 'hullaballoo', 'gobbledygook',
+    'whippersnapper', 'dipthong', 'fisticuffs','rascal'
   ]
 
 const createBandName = () => {
